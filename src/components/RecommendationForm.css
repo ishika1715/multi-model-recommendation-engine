@@ -1,0 +1,100 @@
+.recommendation{
+    padding:100px 10%;
+    background:#f5f7ff;
+    text-align:center;
+}
+
+.recommendation h2{
+    font-size:48px;
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.recommendation p{
+    font-size:20px;
+    color:#6b7280;
+    margin-bottom:60px;
+}
+
+.form-container{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+
+.form-group label{
+    margin-bottom:10px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+.form-group select{
+    padding:15px;
+    font-size:17px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    outline:none;
+    transition:.3s;
+    background:white;
+}
+
+.form-group select:hover{
+    border-color:#2563eb;
+}
+
+.form-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+}
+
+.recommend-btn{
+    grid-column:span 2;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#2563eb;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.recommend-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.form-container{
+    grid-template-columns:1fr;
+    padding:30px;
+}
+
+.recommend-btn{
+    grid-column:span 1;
+}
+
+.recommendation h2{
+    font-size:36px;
+}
+
+.recommendation p{
+    font-size:18px;
+}
+
+}

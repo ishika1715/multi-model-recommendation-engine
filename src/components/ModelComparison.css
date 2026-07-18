@@ -1,0 +1,43 @@
+.comparison{
+    padding:100px 10%;
+    background:#f5f7ff;
+    text-align:center;
+}
+
+.comparison h2{
+    font-size:46px;
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.comparison p{
+    color:#6b7280;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+.comparison-table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:18px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.comparison-table th{
+    background:#2563eb;
+    color:white;
+    padding:20px;
+    font-size:18px;
+}
+
+.comparison-table td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+    font-size:17px;
+}
+
+.comparison-table tr:hover{
+    background:#eef4ff;
+}
