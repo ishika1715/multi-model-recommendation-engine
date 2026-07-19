@@ -8,6 +8,7 @@ import Models from "./components/Models";
 import RecommendationForm from "./components/RecommendationForm";
 import RecommendationResult from "./components/RecommendationResult";
 import ModelComparison from "./components/ModelComparison";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <RecommendationForm/>
       <RecommendationResult/>
       <ModelComparison/>
+      <Footer/>
     </>
   );
 }
