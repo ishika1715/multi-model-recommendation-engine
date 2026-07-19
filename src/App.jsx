@@ -1,32 +1,49 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Working from "./components/Working";
-import Models from "./components/Models";
-import RecommendationForm from "./components/RecommendationForm";
-import RecommendationResult from "./components/RecommendationResult";
-import ModelComparison from "./components/ModelComparison";
-import Dashboard from "./components/Dashboard";
-import Footer from "./components/Footer";
+
+import Home from "./components/Pages/Home";
+import Recommendation from "./components/Pages/Recommendation";
+import Compare from "./components/Pages/Compare";
+import DashboardPage from "./components/Pages/DashboardPage";
+import About from "./components/Pages/About";
+
+import "./App.css";
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+
       <Navbar />
-      <Hero />
-      <Features />
-      <Working/>
-      <Models />
-      <RecommendationForm/>
-      <RecommendationResult/>
-      <ModelComparison/>
-       <Dashboard/>
-      <Footer/>
-     
-    </>
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route 
+          path="/recommendation" 
+          element={<Recommendation />} 
+        />
+
+        <Route 
+          path="/compare" 
+          element={<Compare />} 
+        />
+
+        <Route 
+          path="/dashboard" 
+          element={<DashboardPage />} 
+        />
+
+        <Route 
+          path="/about" 
+          element={<About />} 
+        />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
