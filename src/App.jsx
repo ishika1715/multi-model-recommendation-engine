@@ -10,39 +10,34 @@ import About from "./components/Pages/About";
 
 import "./App.css";
 
-
 function App() {
   return (
     <BrowserRouter>
-
       <Navbar />
 
       <Routes>
-
         <Route path="/" element={<Home />} />
 
-        <Route 
-          path="/recommendation" 
-          element={<Recommendation />} 
+        <Route
+          path="/recommendation"
+          element={<Recommendation />}
         />
 
-        <Route 
-          path="/compare" 
-          element={<Compare />} 
+        <Route
+          path="/compare"
+          element={<Compare />}
         />
 
-        <Route 
-          path="/dashboard" 
-          element={<DashboardPage />} 
+        <Route
+          path="/dashboard"
+          element={<DashboardPage />}
         />
 
-        <Route 
-          path="/about" 
-          element={<About />} 
+        <Route
+          path="/about"
+          element={<About />}
         />
-
       </Routes>
-
     </BrowserRouter>
   );
 }

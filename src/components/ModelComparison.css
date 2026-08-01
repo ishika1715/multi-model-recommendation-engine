@@ -1,43 +1,207 @@
+/* ===========================
+   MODEL COMPARISON
+=========================== */
+
 .comparison{
-    padding:100px 10%;
-    background:#f5f7ff;
+
+    padding:100px 8%;
+
+    background:var(--bg);
+
     text-align:center;
+
+    transition:.4s ease;
+
 }
 
+
+/* ===========================
+   TITLE
+=========================== */
+
 .comparison h2{
-    font-size:46px;
-    color:#111827;
+
+    font-size:42px;
+
+    color:var(--text);
+
     margin-bottom:15px;
+
 }
 
 .comparison p{
-    color:#6b7280;
-    margin-bottom:40px;
-    font-size:20px;
+
+    color:var(--secondary);
+
+    font-size:18px;
+
+    margin-bottom:50px;
+
 }
+
+
+/* ===========================
+   TABLE WRAPPER
+=========================== */
+
+.table-wrapper{
+
+    overflow-x:auto;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+/* ===========================
+   TABLE
+=========================== */
 
 .comparison-table{
+
     width:100%;
+
     border-collapse:collapse;
-    overflow:hidden;
-    border-radius:18px;
-    background:white;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    min-width:900px;
+
 }
+
+
+/* ===========================
+   HEADER
+=========================== */
 
 .comparison-table th{
-    background:#2563eb;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
     color:white;
+
     padding:20px;
-    font-size:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    text-align:center;
+
 }
+
+
+/* ===========================
+   CELLS
+=========================== */
 
 .comparison-table td{
+
     padding:18px;
-    border-bottom:1px solid #eee;
-    font-size:17px;
+
+    color:var(--text);
+
+    border-bottom:1px solid var(--border);
+
+    transition:.3s;
+
 }
 
-.comparison-table tr:hover{
-    background:#eef4ff;
+
+/* ===========================
+   ROW HOVER
+=========================== */
+
+.comparison-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.comparison-table tbody tr:hover{
+
+    background:rgba(37,99,235,.08);
+
+}
+
+
+/* ===========================
+   BADGES
+=========================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.blue{
+
+    background:#2563eb;
+
+}
+
+.green{
+
+    background:#10b981;
+
+}
+
+.orange{
+
+    background:#f59e0b;
+
+}
+
+.red{
+
+    background:#ef4444;
+
+}
+
+.purple{
+
+    background:#8b5cf6;
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.comparison{
+
+    padding:70px 20px;
+
+}
+
+.comparison h2{
+
+    font-size:34px;
+
+}
+
+.comparison p{
+
+    font-size:16px;
+
+}
+
 }

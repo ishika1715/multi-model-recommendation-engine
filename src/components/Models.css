@@ -1,17 +1,18 @@
 .models{
     padding:100px 8%;
-    background:#f5f7fb;
+    background:var(--bg);
     text-align:center;
+    transition:.4s;
 }
 
 .models h2{
     font-size:42px;
-    color:#111827;
+    color:var(--text);
     margin-bottom:15px;
 }
 
 .models p{
-    color:#6b7280;
+    color:var(--secondary);
     font-size:18px;
     margin-bottom:60px;
 }
@@ -23,7 +24,8 @@
 }
 
 .model-card{
-    background:white;
+    background:var(--card);
+    border:1px solid var(--border);
     padding:35px;
     border-radius:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
@@ -37,7 +39,7 @@
 
 .model-card h3{
     font-size:24px;
-    color:#2563eb;
+    color:var(--primary);
     margin-bottom:12px;
 }
 

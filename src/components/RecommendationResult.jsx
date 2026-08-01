@@ -1,58 +1,101 @@
 import "./RecommendationResult.css";
 
-function RecommendationResult() {
+function RecommendationResult({ data }) {
+
+  const defaultModels = [
+
+    {
+      name: "GPT-5.5",
+      icon: "🧠",
+      tag: "Primary Model",
+      description: "Excellent reasoning and coding capabilities.",
+      score: "98%"
+    },
+
+    {
+      name: "Gemini Flash",
+      icon: "⚡",
+      tag: "Fast Response",
+      description: "Best for lightweight requests and quick replies.",
+      score: "92%"
+    },
+
+    {
+      name: "Groq",
+      icon: "🚀",
+      tag: "Ultra Fast",
+      description: "High-speed inference for low latency applications.",
+      score: "90%"
+    }
+
+  ];
+
+  let models = defaultModels;
+
+  if (data) {
+
+    models = [
+
+      data,
+
+      {
+        name: "Gemini Flash",
+        icon: "⚡",
+        tag: "Alternative",
+        description: "Balanced AI model.",
+        score: "92%"
+      },
+
+      {
+        name: "Llama 4",
+        icon: "📖",
+        tag: "Open Source",
+        description: "Deploy locally when privacy is important.",
+        score: "88%"
+      }
+
+    ];
+
+  }
+
   return (
+
     <section className="result">
+
       <h2>Your Recommended AI Stack</h2>
+
       <p>Based on your project requirements.</p>
 
       <div className="result-container">
 
-        <div className="result-card">
-          <h3>🧠 GPT-5.5</h3>
-          <span className="tag">Primary Model</span>
+        {models.map((model, index) => (
 
-          <p>
-            Excellent reasoning and coding capabilities.
-          </p>
+          <div className="result-card" key={index}>
 
-          <div className="score">
-            Match Score <strong>98%</strong>
+            <h3>
+              {model.icon} {model.name}
+            </h3>
+
+            <span className="tag">
+              {model.tag}
+            </span>
+
+            <p>
+              {model.description}
+            </p>
+
+            <div className="score">
+              Match Score <strong>{model.score}</strong>
+            </div>
+
           </div>
-        </div>
 
-        <div className="result-card">
-          <h3>⚡ Gemini Flash</h3>
-          <span className="tag secondary">
-            Fast Response
-          </span>
-
-          <p>
-            Best for lightweight requests and quick replies.
-          </p>
-
-          <div className="score">
-            Match Score <strong>92%</strong>
-          </div>
-        </div>
-
-        <div className="result-card">
-          <h3>📖 Llama 4</h3>
-          <span className="tag open">
-            Open Source
-          </span>
-
-          <p>
-            Deploy locally when privacy is important.
-          </p>
-
-          <div className="score">
-            Match Score <strong>88%</strong>
-          </div>
-        </div>
+        ))}
 
       </div>
+
     </section>
+
   );
 }
 
